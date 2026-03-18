@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true })) // For parsing URL-encoded data
 
 // cors middleware
 app.use(cors({
-  origin: import.meta.env.VITE_BASE_URL, // Adjust this to your frontend's URL
+  origin: process.env.VITE_BASE_URL, // Adjust this to your frontend's URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }))
